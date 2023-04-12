@@ -9,7 +9,13 @@ module.exports = {
         {
           Shantell : ["Shantell", "sans-serif"]
         }
-      ]
+      ],
+      colors: {
+        'bgColor': '#FDF4F5',
+        'pink' : '#E8A0BF',
+        'purple' :'#BA90C6',
+        'blue': '#C0DBEA',
+      },
     },
   },
   plugins: [],
