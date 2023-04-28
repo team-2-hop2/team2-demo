@@ -9,7 +9,7 @@ const products = {
 export const Detail = () => {
 
   const [size, setSize] = useState('')
-  const [color, setColor] = useState('red')
+  const [color, setColor] = useState(products.color[0])
   const [ image,  setImage ] = useState('')
 
   const a = 50000
@@ -24,23 +24,22 @@ export const Detail = () => {
         </div>  
         <div className='h-[1px] bg-[#d9d9d9] w-[350px] sm:w-[580px] md:w-[720px] lg:w-[480px] xl:w-[580px]'></div>
         <div className='w-[350px] sm:w-[580px] md:w-[720px] lg:w-[480px] xl:w-[580px] h-[250px] pt-3 pb-3 flex justify-between flex-col'>
-          <div className=' w-full row-span-3 gap-x-3 flex items-center '>
+          <div className='flex items-center w-full row-span-3 gap-x-3'>
               <p className='font-[Shantell]'>Хэмжээ :</p>
               {products.size.map((item, index) => {
                   return <button key={index} className={`${item === size ? "bg-purple text-black font-[Shantell] p-1 rounded-[10px]" : "hover:bg-purple  text-black font-[Shantell] p-1 rounded-[10px]"}`} onClick={ () => setSize(item)}>{item}</button>
               })}
           </div>
-          <div className=' w-full row-span-3 gap-x-3 flex items-center '>
+          <div className='flex items-center w-full row-span-3 gap-x-3'>
               <p className='font-[Shantell]'>Өнгө :</p>
               {products.color.map((item, index) => {
-                console.log(item)
-                  // return <button key={index} className={`${item === color ? `  w-9 h-9 bg-[${item}] p-1 rounded-[50%] border-solid  border-purple border-4`  : `  w-9 h-9 bg-[${item}] p-1 rounded-[50%]`}`} onClick={() => setColor(item)}></button>
-                  // return <button key={index} className={`bg-[${item}]`} onClick={() => setColor(item)}></button>
-                  // <button key={index} className={`w-9 h-9 rounded bg-[${item}]`} onClick={() => setColor(item)}></button>
-                  return <div className={`bg-[${item}]`}>{item}</div>
+                const border = `${item === color ? 'border-solid border-purple border-4' : ' '}` 
+                return (
+                  <button className={`h-9 w-9 bg-[${item}] rounded-[50%] ${border}`} key={index} onClick={() => setColor(item)}></button>
+                )
               })}
           </div>
-          <div className=' w-full row-span-3 gap-x-3 flex items-center '>
+          <div className='flex items-center w-full row-span-3 gap-x-3'>
               <p className='font-[Shantell]'>Зураг :</p>
               {products.image.map((item, index) => {
                 return <img alt='' src={item} className={`${item === image ? "border-solid  border-purple border-4 w-[60px] h-[60px] object-cover" : "w-[60px] h-[60px] object-cover"}`} onClick={() => setImage(item)}/>
