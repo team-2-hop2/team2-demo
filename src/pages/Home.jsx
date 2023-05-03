@@ -1,9 +1,11 @@
 import React from 'react'
+import { CartItem, CartList } from '../components'
 
 export const Home = () => {
   return (
-    <div className='bg-blue'>
-      <p className='text-xl font-[Shantell]'>Homfewfgegwwe</p>
+    <div>
+      {/* <p className='text-xl font-[Shantell]'>Homfewfgegwwepis</p> */}
+      <CartList/>
     </div>
   )
   }
