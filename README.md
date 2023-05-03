@@ -1,6 +1,11 @@
 # Getting Started with Create React App
 
+---Clothing brand website (terskhen brand)---
+
+using frameworks : react tailwind MUI mongoose nodemon jwt bcrypt express vercel
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+figma link: https://www.figma.com/file/gIvkWhxXIA1zAKQTTfIU1g/demo2023?node-id=3-2&t=M99GdEr0tJRyOXyT-0
 
 ## Available Scripts
 
