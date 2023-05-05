@@ -1,6 +1,7 @@
 import React from "react";
 import { CartItem } from "../cartItem/CartItem";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 export const CartList = (key) => {
   const products_mock = [
@@ -72,7 +73,7 @@ export const CartList = (key) => {
   return (
     <div className="min-w-min" key={key}>
       <div className="font-[Shantell] text-3xl">Миний сагс</div>
-      <div className="w-[100%] p-4 bg-bgColor border border-gray-200 shadow sm:w-[50%]">
+      <div className="w-[100%] p-4 bg-bgColor border-gray-200 shadow rounded-xl lg:w-[50vw] mt-5 sm:w-[70vw] md:flex flex-col justify-center">
         <div className="flex items-center justify-between mb-4">
           <h5 className="text-xl font-[Shantell] leading-none text-gray-900 ">
             Бүтээгдэхүүн нэр
@@ -91,6 +92,13 @@ export const CartList = (key) => {
             ))}
           </ul>
         </div>
+      </div>
+      <div className="flex justify-center">
+        <Link to="/CartPay">
+          <button className="w-[300px] bg-pink font-[Shantell] border rounded-2xl mt-10 lg:hidden xl:hidden 2xl:hidden">
+            Захиалах
+          </button>
+        </Link>
       </div>
     </div>
   );

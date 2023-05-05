@@ -1,9 +1,12 @@
 import React from "react";
 
-export const OrderInfo = () => {
+export const OrderInfo = (props) => {
+  const { className } = props;
   return (
     <div>
-      <div className=" w-[370px] bg-bgColor flex flex-col gap-10 justify-around px-3 py-10 rounded-xl mt-80 sm:w-[600px]">
+      <div
+        className={`w-[100%] bg-bgColor flex flex-col gap-10 justify-around px-3 py-10 rounded-xl mt-14 sm:w-[600px] lg:w-[550px] ${className}`}
+      >
         <div>
           <div className="font-[Shantell] ">НЭР</div>
           <input
@@ -22,9 +25,7 @@ export const OrderInfo = () => {
           <div>
             <div className="font-[Shantell] ">ДҮҮРЭГ СОНГОХ</div>
             <select
-              name="duureg"
-              id="duureg-select"
-              className="w-[170px] h-[30px] rounded-xl pl-[10px] sm:w-[250px]"
+              className="w-[170px] h-[30px] rounded-xl pl-[10px] sm:w-[250px] lg:w-[200px]"
             >
               <option>Дүүрэг сонгох</option>
               <option>Баянгол</option>
@@ -37,7 +38,7 @@ export const OrderInfo = () => {
           </div>
           <div>
             <div className="font-[Shantell] ">ХОРОО СОНГОХ</div>
-            <select className="w-[170px] h-[30px] rounded-xl pl-[10px] sm:w-[250px]">
+            <select className="w-[170px] h-[30px] rounded-xl pl-[10px] sm:w-[250px] lg:w-[200px]">
               <option className="font-[Shantell]">Хороо сонгох</option>
               <option>1-р хороо</option>
               <option>2-р хороо</option>
@@ -106,10 +107,10 @@ export const OrderInfo = () => {
           </div>
         </div>
         <div className="w-100% flex justify-center">
-            <button className="bg-pink font-[Shantell] w-[350px] sm:w-[500px] rounded-[10px] justify-center hover:bg-bgColor border-solid border-pink border-2">
-              Үргэжлүүлэх
-            </button>
-          </div>
+          <button className="bg-pink font-[Shantell] w-[350px] sm:w-[500px] rounded-[10px] justify-center hover:bg-bgColor border-solid border-pink border-2">
+            Үргэжлүүлэх
+          </button>
+        </div>
       </div>
     </div>
   );
