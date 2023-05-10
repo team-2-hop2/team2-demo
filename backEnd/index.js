@@ -1,6 +1,6 @@
 const express = require("express");
 const userRoute = require("./routes/userRoute")
-// const commentRoute = require("./routes/commentRoute")
+const orderRoute = require("./routes/orderRoute")
 const cors = require("cors");
 
 const connect = require("./helper/db")
@@ -19,6 +19,7 @@ app.use(cors(corsOptions));
 
 app.use(express.json());
 app.use("/users", userRoute)
+app.use("/orders", orderRoute )
 
 
 
