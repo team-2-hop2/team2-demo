@@ -1,5 +1,4 @@
 import React from "react";
-import hoodie from "./hoodie.png";
 
 export const CartItem = ({ el, key, handleChange }) => {
   return (
@@ -8,7 +7,6 @@ export const CartItem = ({ el, key, handleChange }) => {
         <div className="flex gap-2 justify-between items-center">
           <img
             className="w-11 h-11 rounded-full"
-            src={hoodie}
             alt="Neil image"
           />
           <div>

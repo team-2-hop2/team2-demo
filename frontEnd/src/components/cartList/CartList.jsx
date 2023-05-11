@@ -1,5 +1,5 @@
 import React from "react";
-import { CartItem } from "../CartItem";
+import { CartItem } from "../cartItem/CartItem";
 import { useState } from "react";
 
 export const CartList = (key) => {
