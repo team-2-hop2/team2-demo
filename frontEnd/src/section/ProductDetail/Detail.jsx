@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import ImageSlider from '../../components/ImageSlider';
+import ImageSlider from '../../components/imageSlider/ImageSlider';
 
 const products = {
   size : ['130', '140', '150'],
