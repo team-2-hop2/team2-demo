@@ -1,7 +1,12 @@
-import React from 'react'
+import React from "react";
+import { OrderInfo } from "../section/Cart/OrderInfo";
+import { CartList } from "../components";
 
 export const CartPage = () => {
   return (
-    <div className='font-[Shantell]'>CartPage</div>
-  )
-}
+    <div className="w-[100%] flex justify-evenly pl-5 gap-5">
+      <CartList />
+      <OrderInfo className="hidden lg:flex" />
+    </div>
+  );
+};
