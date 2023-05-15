@@ -3,6 +3,7 @@ import { Header } from '../components/header/Header'
 import { Footer } from '../components/footer/Footer'
 import { useDataContext } from '../context/Context';
 import { SignIn } from '../section/signIn/SignIn';
+import { ProductList } from '../components/productList'
 
 export const Home = () => {
   const {isOpen, setIsOpen} = useDataContext();
