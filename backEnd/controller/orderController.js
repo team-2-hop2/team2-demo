@@ -17,8 +17,7 @@ exports.createOrder = async (request, response) => {
 
 exports.getOrders = async (request, response) => {
   try {
-    const { post } = request.body
-    const orders = await comModel.find()
+    const orders = await OrderModel.find()
     return response.status(200).json({
       message: true,
       data: orders                            
