@@ -4,6 +4,8 @@ import axios from 'axios'
 export const Uploader = () => {
 
     const [selectedImage, setSelectedImage] = useState()
+    const [selectedImage1, setSelectedImage1] = useState()
+    const [selectedImage2, setSelectedImage2] = useState()
 
     const convertToBase64 = (file) => {
         return new Promise((resolve, reject) => {
@@ -11,25 +13,28 @@ export const Uploader = () => {
           fileReader.readAsDataURL(file)
           fileReader.onload = () => {
             resolve(fileReader.result)
+            // console.log(fileReader.result.replace("data:application/octet-stream", "data:image/jpeg"));
           }
           fileReader.onerror = (error) => {
             reject(error)
           }
         })
       }
-      const handleFileUpload = async (e) => {
+      const handleFileUpload = async (e, f, g) => {
         const file = e
+        const file1 = f
+        const file2 = g
         const base64 = await convertToBase64(file)
+        const base65 = await convertToBase64(file1)
+        const base66 = await convertToBase64(file2)
         console.log(base64)
         axios.post('http://localhost:8000/products', {
-            name: "sarfan",
+            name: "sarfanaaa",
             size:["130", "140", "150"],
-            price:"45000",
-            color:["red", "yellow"],
+            price:"50000",
             highlight:true,
             discount:true,
-            image: [base64]
-      
+            image: [base64, base65, base66]
         })
       }
 
@@ -64,7 +69,11 @@ export const Uploader = () => {
     
           <input type="file" name="myImage"onChange={(event) => {console.log(event.target.files[0])
             setSelectedImage(event.target.files[0])}}/>
-          <button className='bg-white' onClick={()=>handleFileUpload(selectedImage)}>Upload</button>
+          <input type="file" name="myImage"onChange={(event) => {console.log(event.target.files[0])
+            setSelectedImage1(event.target.files[0])}}/>
+          <input type="file" name="myImage"onChange={(event) => {console.log(event.target.files[0])
+            setSelectedImage2(event.target.files[0])}}/>  
+          <button className='bg-white' onClick={()=>handleFileUpload(selectedImage, selectedImage1, selectedImage2)}>Upload</button>
         </div>
       )
     
