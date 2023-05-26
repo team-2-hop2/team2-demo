@@ -90,7 +90,7 @@ export const OrderInfo = (props) => {
             type="text"
           ></textarea>
         </div>
-        <div className="font-[Shantell] w-[100%] flex flex-col items-center gap-5 text-gray-600">
+        {/* <div className="font-[Shantell] w-[100%] flex flex-col items-center gap-5 text-gray-600">
           <div>ХҮРГЭЛТИЙН НӨХЦӨЛ</div>
           <div className="w-[100%] pl-5 text-[15px]">
             Баталгаажсан захиалга дэлгүүрээс ирж авна. Дэлгүүр өдрийн
@@ -105,7 +105,7 @@ export const OrderInfo = (props) => {
             шилжүүлэх/ Төлбөр хийгдээгүй тохиолдолд захиалга цуцлагдахыг
             анхаарна уу.
           </div>
-        </div>
+        </div> */}
         <div className="w-100% flex justify-center">
           <button className="bg-pink font-[Shantell] w-[350px] sm:w-[500px] rounded-[10px] justify-center hover:bg-bgColor border-solid border-pink border-2">
             Үргэжлүүлэх
