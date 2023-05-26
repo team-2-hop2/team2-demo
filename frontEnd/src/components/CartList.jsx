@@ -1,5 +1,5 @@
 import React from "react";
-import { CartItem } from "../cartItem/CartItem";
+import { CartItem } from "./CartItem";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 
