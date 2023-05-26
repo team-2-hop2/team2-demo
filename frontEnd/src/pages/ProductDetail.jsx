@@ -1,7 +1,12 @@
 import React from 'react'
+import { Header } from '../components/header/Header'
+import { Footer } from '../components/footer/Footer'
 
 export const ProductDetail = () => {
   return (
-    <div className='bg-pink w-[400px] h-[500px]'>ProductDetail</div>
+    <div className='h-screen flex flex-col justify-between'>
+      <Header/>
+      <Footer/>
+    </div>
   )
 }
