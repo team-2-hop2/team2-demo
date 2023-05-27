@@ -39,7 +39,7 @@ export const Detail = () => {
                   return <button key={index} className={`${item === size ? "bg-purple text-black font-[Shantell] 2xl:text-2xl p-1 rounded-[10px]" : "hover:bg-purple 2xl:text-2xl  text-black font-[Shantell] p-1 rounded-[10px]"}`} onClick={ () => setSize(item)}>{item}</button>
               })}
           </div>
-          <div className='flex items-center w-full row-span-3 gap-x-3'>
+          {/* <div className='flex items-center w-full row-span-3 gap-x-3'>
               <p className='font-[Shantell] 2xl:text-2xl'>Өнгө :</p>
               {products.color.map((item, index) => {
                 const border = `${item === color ? 'border-solid border-purple  border-4' : ' '}` 
@@ -47,7 +47,7 @@ export const Detail = () => {
                   <button className={`h-9 w-9 bg-[${item}] rounded-[50%] ${border}`} key={index} onClick={() => setColor(item)}></button>
                 )
               })}
-          </div>
+          </div> */}
           <div className='flex items-center w-full row-span-3 gap-x-3'>
               <p className='font-[Shantell] 2xl:text-2xl'>Зураг :</p>
               {products.image.map((item, index) => {

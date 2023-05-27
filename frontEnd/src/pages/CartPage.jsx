@@ -6,10 +6,10 @@ import { Footer } from "../components/footer/Footer";
 
 export const CartPage = () => {
   return (
-    <div>
+    <div className="h-auto flex flex-col gap-5">
       <Header/>
-      <div className="w-[100%] flex justify-evenly">
-        <CartList />
+      <div className="w-full flex justify-evenly">
+        <CartList/>
         <OrderInfo className="hidden lg:flex" />
       </div>
       <Footer/>

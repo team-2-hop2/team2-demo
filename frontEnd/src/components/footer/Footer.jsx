@@ -5,8 +5,8 @@ import InstagramIcon from '@mui/icons-material/Instagram';
 
 export const Footer = () => {
   return (
-    <div className='bg-blue flex flex-col items-center gap-10 w-screen'>
-      <div className='lg:flex lg:justify-around lg:w-screen lg:items-center'>
+    <div className='bg-blue flex flex-col items-center gap-10 w-auto'>
+      <div className='lg:flex lg:justify-around lg:w-full lg:items-center'>
         <div className='flex  items-center'>
           <img alt='' src={logo} className='h-[100px]' />
           <FacebookIcon className='text-white cursor-pointer' onClick={ () => window.open("https://www.facebook.com/Terskhenbrand", "_blank")  } />

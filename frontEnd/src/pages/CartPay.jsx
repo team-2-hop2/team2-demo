@@ -5,9 +5,9 @@ import { Footer } from '../components/footer/Footer'
 
 export const CartPay = () => {
   return (
-    <div>
+    <div className='h-auto flex flex-col gap-5'>
       <Header/>
-      <div className='sm:w-[100vw] flex justify-center'>
+      <div className='sm:w-full flex justify-center'>
           <OrderInfo/>
       </div>
       <Footer/>

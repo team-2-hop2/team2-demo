@@ -14,7 +14,7 @@ export const Header = () => {
 
 
   return (
-    <div className='w-screen bg-blue flex items-center justify-between px-3' >
+    <div className='w-auto  bg-blue flex items-center justify-between px-3' >
       <img alt='' src={logo} className='h-[100px]' />
       <div className='flex gap-1'>
         <PersonIcon className='text-white '  />
