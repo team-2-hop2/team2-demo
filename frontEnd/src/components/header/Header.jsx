@@ -15,7 +15,7 @@ export const Header = () => {
 
   return (
     <div className='w-auto  bg-blue flex items-center justify-between px-3' >
-      <img alt='' src={logo} className='h-[100px]' />
+      <img alt='' src={logo} className='h-[100px] cursor-pointer' onClick={()=> navigate("/")} />
       <div className='flex gap-1'>
         <PersonIcon className='text-white '  />
         <ShoppingCartIcon className='text-white cursor-pointer' onClick={()=> navigate("/Cart")} />
