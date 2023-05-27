@@ -34,7 +34,8 @@ export const Uploader = () => {
       highlight: true,
       discount: true,
       image: [file, file1, file2],
-    });
+    })
+    .then((res)=> {console.log(res)});
   };
 
   // exports.uploadIMG = async (request, response, next) => {

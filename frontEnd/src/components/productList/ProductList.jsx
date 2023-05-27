@@ -8,8 +8,7 @@ export const ProductList = (myOnClick) => {
 
   useEffect(() => {
     const getProducts = async () => {
-      console.log('getProd')
-      await axios.get("http://localhost:3333/products")
+      await axios.get("http://localhost:8000/products")
       .then((response) => {
         console.log("=====>", response.data.data);
         setData(response.data.data)
@@ -23,7 +22,7 @@ export const ProductList = (myOnClick) => {
 
 
   return (
-    <div onClick={myOnClick}>
+    <div className='grid 2xl:grid-cols-4 xl:grid-cols-4 lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-3 grid-cols-2 gap-4 p-4'>
       {data?.map((item, i) => {
         return <ProductCard key={i} data={item} />
       })}
