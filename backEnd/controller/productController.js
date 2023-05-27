@@ -2,24 +2,25 @@ const ProductModel = require("../model/productModel");
 const fs = require('fs');
 const path = require('path');
 
+
 exports.createProduct = async (request, response) => {
 
   try {
     const { name, price, size, color, image, highlight, discount  } = request.body;
-    
-    const images = image;
-
-    if (!Array.isArray(images)) {
+    // const images = image;
+    return response.status(200).json(request.body.image)
+    if (!Array.isArray(image)) {
       return res.status(400).json({ error: 'Images field should be an array.' });
     }
-
-    const uploadDir = path.join(__dirname, 'uploads');
-    for (let i = 0; i < images.length; i++) {
-      const file = images[i];
-      const fileName = Date.now() + '-' + file.originalname;
+    const uploadDir = "C:" + String.fromCharCode(92) + "Users" + String.fromCharCode(92) + "User" + String.fromCharCode(92) + "Desktop" + String.fromCharCode(92) + "Coding"+ String.fromCharCode(92) + "team2-demo" + String.fromCharCode(92) + "backEnd" + String.fromCharCode(92) + "image";
+    console.log(uploadDir)
+    for (let i = 0; i < image.length; i++) {
+      const file = image[i];
+      console.log(file);
+      const fileName = "qwertyuio.jpg";
       const filePath = path.join(uploadDir, fileName);
-  
-      // Move the file to the desired upload directory
+      console.log('===> path:  ',filePath), 
+
       file.mv(filePath, (err) => {
         if (err) {
           console.error('Failed to upload image:', err);
@@ -27,8 +28,7 @@ exports.createProduct = async (request, response) => {
         }
       });
     }
-  
-    // Return a response indicating successful upload
+
     res.status(200).json({ message: 'Product uploaded successfully.' });
   
     const createProduct = await ProductModel.create({
