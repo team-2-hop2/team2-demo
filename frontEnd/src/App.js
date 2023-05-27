@@ -2,6 +2,7 @@ import React from 'react';
 import {CartPage, Home, ProductDetail} from './pages'
 import {createBrowserRouter, RouterProvider} from 'react-router-dom'
 import { CartPay } from './pages/CartPay';
+import { Handle } from './context/Context';
 
 
 const router = createBrowserRouter([
@@ -25,7 +26,9 @@ const router = createBrowserRouter([
 
 function App() {
   return (
-    <RouterProvider router={router} />
+    <Handle>
+      <RouterProvider router={router} />
+    </Handle>
   );
 }
 

@@ -49,7 +49,7 @@ export const SignIn = () => {
                   </p>
                 <button
                   type="submit"
-                  class="w-full font-[Shantell] bg-pink border-solid border-1 border-black text-gray-600 hover:border-solid hover:border-1 hover:bg-bgColor rounded-lg hover:border-black mt-5"
+                  class="w-full font-[Shantell] bg-pink text-gray-600 hover:border-solid hover:border-2 hover:bg-bgColor rounded-lg hover:border-pink mt-5"
                 >
                   Нэвтрэх
                 </button>
