@@ -7,10 +7,11 @@ const products = {
   image : ["https://nb.scene7.com/is/image/NB/mt21540ag_nb_70_i?$pdpflexf22x$&qlt=80&fmt=webp&wid=880&hei=880", "https://nb.scene7.com/is/image/NB/mt21540ag_nb_72_i?$pdpflexf22x$&qlt=80&fmt=webp&wid=880&hei=880"]
 }
 export const Detail = () => {
+  
   const slides = [
-    { url: "https://nb.scene7.com/is/image/NB/mt21540ag_nb_70_i?$pdpflexf22x$&qlt=80&fmt=webp&wid=880&hei=880" },
+    { url: "https://nb.scene7.com/is/image/NB/mt21540ag_nb_70_i?$pdpflexf22x$&qlt=80&fmt=webp&wid=880&hei=880"},
     { url: "https://nb.scene7.com/is/image/NB/mt21540ag_nb_72_i?$pdpflexf22x$&qlt=80&fmt=webp&wid=880&hei=880"},
-    { url: "https://nb.scene7.com/is/image/NB/ww928bk3_nb_02_i?$pdpflexf22x$&qlt=80&fmt=webp&wid=880&hei=880" },
+    { url: "https://nb.scene7.com/is/image/NB/ww928bk3_nb_02_i?$pdpflexf22x$&qlt=80&fmt=webp&wid=880&hei=880"},  
     { url: "https://nb.scene7.com/is/image/NB/w880c13_nb_02_i?$pdpflexf22x$&qlt=80&fmt=webp&wid=880&hei=880"},
     { url: "https://nb.scene7.com/is/image/NB/wl574evw_nb_02_i?$pdpflexf22x$&qlt=80&fmt=webp&wid=880&hei=880"},
   ];
@@ -24,7 +25,7 @@ export const Detail = () => {
   return (
     <div className=' flex flex-col lg:flex-row bg-bgColor w-[370px] sm:w-[600px] md:w-[750px]  lg:w-[1000px] lg:h-[550px] xl:w-[1250px] xl:h-[680px] 2xl:w-[1500px] 2xl:h-[800px] rounded-[20px] items-center overflow-hidden pt-2 lg:justify-between p-6'>
       <div>
-        <ImageSlider slides={slides} className=' '/>
+        <ImageSlider slides={slides}/>
       </div>
       <div className='flex flex-col lg:h-[470px] xl:h-[620px] 2xl:h-[400px] 2xl:justify-between 2xl:self-start 2xl:pt-8 '>
         <div className='flex flex-col w-[350px] sm:w-[580px] md:w-[720px] lg:w-[480px] xl:w-[580px] 2xl:w-[680px]'>
