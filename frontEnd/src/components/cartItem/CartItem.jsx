@@ -6,12 +6,13 @@ export const CartItem = ({ el, key, handleChange }) => {
       <div className="flex justify-between items-center">
         <div className="flex gap-2 justify-between items-center">
           <img
+            src={el.image}
             className="w-11 h-11 rounded-full"
             alt="Neil image"
           />
           <div>
             <p className="text-sm font-[Shantell] text-gray-900 truncate ">
-              {el.ner}
+              {el.name}
             </p>
             <p className="text-sm  truncate font-[Shantell] ">
               size : {el.size}

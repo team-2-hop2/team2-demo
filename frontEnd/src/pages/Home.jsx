@@ -11,12 +11,14 @@ export const Home = () => {
 
 
   return (
-    <div className='h-screen flex flex-col justify-between'>
+    <div className='h-auto flex flex-col gap-5'>
       <Header/>
       {isOpen && (
         <SignIn/>
       )}
+      <ProductList/>
       <Footer/>
+      <Uploader/>
     </div>
   )
   } 

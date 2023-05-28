@@ -1,9 +1,30 @@
 import React from "react";
 import { CartItem } from "../cartItem/CartItem";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
+import axios from 'axios'
+
 
 export const CartList = (key) => {
+  const [data, setData] = useState();
+
+
+  useEffect(() => {
+    const getCartInfo = async () => {
+      await axios.get("http://localhost:8000/cartInfo")
+      .then((response) => {
+        console.log("=====>", response.data.data);
+        setData(response.data.data)
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+    }
+    getCartInfo()
+  },[]);  
+  
+
+
   const products_mock = [
     {
       ner: "Half Zip shirt",
@@ -34,15 +55,14 @@ export const CartList = (key) => {
       id: 4,
     },
   ];
-  const [data, setData] = useState(products_mock);
 
   function handleChange(id, isIncrease) {
     console.log(id, isIncrease);
     if (isIncrease) {
-      let newdata = data.map((e) => {
+      let newdata = data?.map((e) => {
         if (e.id === id) {
           return {
-            ner: e.ner,
+            ner: e.name,
             size: e.size,
             count: e.count + 1,
             price: e.price,
@@ -54,7 +74,7 @@ export const CartList = (key) => {
       console.log(newdata);
       setData([...newdata]);
     } else {
-      let newdata = data.map((e) => {
+      let newdata = data?.map((e) => {
         if (e.id === id) {
           return {
             ner: e.ner,
@@ -87,7 +107,7 @@ export const CartList = (key) => {
         </div>
         <div className="flow-root">
           <ul role="list">
-            {data.map((element, i) => (
+            {data?.map((element, i) => (
               <CartItem el={element} key={i} handleChange={handleChange} />
             ))}
           </ul>

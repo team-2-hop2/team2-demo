@@ -1,21 +1,20 @@
 import React, { useState } from 'react'
-import sarfan from '../../sarfan.jpg'
+import { useNavigate } from 'react-router-dom'
+import { useDataContext } from '../../context/Context'
 export const ProductCard = ({data}) => {
+  const navigate = useNavigate()
+  const {detailData, setDetailData} = useDataContext();
 
-  console.log(data)
-
-  const product_mock = {
-    name: '',
-    size: ['130','140','150'],
-    price: 222,
+  const handle = () => {
+    navigate("/productDetail");
+    setDetailData(data)
   }
-  const [size, setSize] = useState('')
 
       
   return (
-    <div>
+    <div onClick={() => handle()}>
     <div className='flex flex-col mx-auto w-[165px] sm:w-[200px] md:w-[240px] 2xl:w-[280px] 2xl:h-[450px] bg-bgColor rounded-[20px] overflow-hidden  justify-between p-1 '>
-      <img alt='' src={data.image[1]} className="object-cover h-[250px]  rounded-[20px] "/> 
+      <img alt='' src={data.image[0]} className="object-cover h-[250px]  rounded-[20px] "/> 
       <div className='p-2 flex flex-col h-[60px] 2xl:h-[200px] justify-between'>
         <p className='font-[Shantell] text-start w-full 2xl:text-[25px] text-[20px]'>{data.name}</p> 
         {/* <p className='font-[Shantell]'>Хэмжээ :</p> */}

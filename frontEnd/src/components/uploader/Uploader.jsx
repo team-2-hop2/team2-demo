@@ -6,53 +6,19 @@ export const Uploader = () => {
   const [selectedImage1, setSelectedImage1] = useState();
   const [selectedImage2, setSelectedImage2] = useState();
 
-  const convertToBase64 = (file) => {
-    return new Promise((resolve, reject) => {
-      const fileReader = new FileReader();
-      fileReader.readAsDataURL(file);
-      fileReader.onload = () => {
-        resolve(fileReader.result);
-        // console.log(fileReader.result.replace("data:application/octet-stream", "data:image/jpeg"));
-      };
-      fileReader.onerror = (error) => {
-        reject(error);
-      };
-    });
-  };
   const handleFileUpload = async (e, f, g) => {
-    const file = e;
-    const file1 = f;
-    const file2 = g;
-    // const base64 = await convertToBase64(file)
-    // const base65 = await convertToBase64(file1)
-    // const base66 = await convertToBase64(file2)
-    // console.log(base64)
     await axios.post("http://localhost:8000/products", {
-      name: "test",
+      name: "Hoodie",
       size: ["130", "140", "150"],
-      price: "50000",
-      highlight: true,
-      discount: true,
-      image: [file, file1, file2],
+      price: "45000",
+      highlight: false,
+      discount: false,
+      image: ["https://firebasestorage.googleapis.com/v0/b/terskhen.appspot.com/o/IMG_5781.jpg?alt=media&token=ebfaa295-1ab7-404c-8ba0-6b1a90442367",
+              "https://firebasestorage.googleapis.com/v0/b/terskhen.appspot.com/o/IMG_5782.jpg?alt=media&token=c392c39d-91d1-4edb-9d5c-24f3f0f49f12"],
     })
     .then((res)=> {console.log(res)});
   };
 
-  // exports.uploadIMG = async (request, response, next) => {
-  //     const id = await generateId()
-  //     const image_data = await IMGModel.create({_id:id,...request.body})
-  //     response
-  //     .status(201)
-  //     .json({message: "Post request successful.", data: image_data})
-  // }
-
-  // exports.getIMG = async (request, response, next) => {
-  //     const id = await generateId()
-  //     const image_data = await IMGModel.create({_id:id,...request.body})
-  //     response
-  //     .status(201)
-  //     .json({message: "Post request successful.", data: image_data})
-  // }
   return (
     <div className="bg-gray-500 h-screen">
       <h1 className="text-3xl font-bold font-quicksand underline">

@@ -1,9 +1,12 @@
 import React, { useEffect, useState} from 'react'
 import axios from 'axios'
 import { ProductCard } from '../productCard/ProductCard';
+import { useDataContext } from '../../context/Context';
+import { useNavigate } from 'react-router-dom';
 
 export const ProductList = (myOnClick) => {
   const [data, setData] = useState()
+
 
 
   useEffect(() => {
@@ -24,7 +27,7 @@ export const ProductList = (myOnClick) => {
   return (
     <div className='grid 2xl:grid-cols-4 xl:grid-cols-4 lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-3 grid-cols-2 gap-4 p-4'>
       {data?.map((item, i) => {
-        return <ProductCard key={i} data={item} />
+        return <ProductCard key={i} data={item}  />
       })}
 
     </div>
