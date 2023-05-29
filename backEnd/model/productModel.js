@@ -5,10 +5,10 @@ const productScheme = new Schema({
     name: String,
     price: String,
     size: Array,
-    color: Array,
     image: Array,
     highlight: Boolean,
     discount: Boolean,
+    id:String,
     registerDate: { type: Date, default: Date.now, required: false},
 });
 

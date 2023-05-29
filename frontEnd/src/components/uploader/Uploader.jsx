@@ -8,13 +8,13 @@ export const Uploader = () => {
 
   const handleFileUpload = async (e, f, g) => {
     await axios.post("http://localhost:8000/products", {
-      name: "Hoodie",
+      name: "Oversize цамц",
       size: ["130", "140", "150"],
-      price: "45000",
+      price: "40000",
       highlight: false,
       discount: false,
-      image: ["https://firebasestorage.googleapis.com/v0/b/terskhen.appspot.com/o/IMG_5781.jpg?alt=media&token=ebfaa295-1ab7-404c-8ba0-6b1a90442367",
-              "https://firebasestorage.googleapis.com/v0/b/terskhen.appspot.com/o/IMG_5782.jpg?alt=media&token=c392c39d-91d1-4edb-9d5c-24f3f0f49f12"],
+      image: ["https://firebasestorage.googleapis.com/v0/b/terskhen.appspot.com/o/IMG_5594_2.jpg?alt=media&token=dfa3df1f-0de5-4790-830c-d04c00188f1b",
+              "https://firebasestorage.googleapis.com/v0/b/terskhen.appspot.com/o/IMG_5598_1.jpg?alt=media&token=7c51eea8-9620-4c92-8cf6-bdfc3299c745"],
     })
     .then((res)=> {console.log(res)});
   };

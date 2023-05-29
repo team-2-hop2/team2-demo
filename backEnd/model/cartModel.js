@@ -4,9 +4,10 @@ const { model, Schema } = require("mongoose");
 const cartScheme = new Schema({   
     name: String,
     size: String,
-    count: String,
+    count: Number,
     price: String,
-    id: String,
+    image: String,
+    id: Number,
     // owner: {
     //     type: Schema.ObjectId, 
     //     ref:"User", 

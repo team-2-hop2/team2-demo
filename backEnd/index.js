@@ -17,9 +17,7 @@ const corsOptions ={
     credentials:true,  
     optionSuccessStatus:200
 }
-app.use(express.json({ limit: "25mb" }));
 app.use(fileUpload());
-app.use(express.urlencoded({ limit: "25mb", extended: true }));
 app.use(cors(corsOptions));
 
 app.use(express.json());

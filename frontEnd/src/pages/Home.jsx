@@ -18,7 +18,7 @@ export const Home = () => {
       )}
       <ProductList/>
       <Footer/>
-      <Uploader/>
+      {/* <Uploader/> */}
     </div>
   )
   } 
